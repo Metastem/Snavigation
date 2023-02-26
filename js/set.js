@@ -6,7 +6,7 @@ var se_list_preinstall = {
         title: "Metastem",
         url: "https://go.metastem.su/search.php",
         name: "q",
-        icon: "anarchaos a",
+        icon: "anarchaos",
     }
 };
 
