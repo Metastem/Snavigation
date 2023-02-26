@@ -32,6 +32,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.anarchy {
+    font-family: Anarchaos;
+    font-size: 5rem;
+    font-weight: 400
+}
+
+.anarchy1 .a {
+    color: #b30000;
+    font-weight: 200
+}
+
 .icon-tianjia-:before {
   content: "\e643";
 }
