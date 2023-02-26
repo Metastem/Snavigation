@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Anarchaos";
+  src: url('../font/anarchaos.ttf') format('truetype');
+}
+
+@font-face {
   font-family: "iconfont";
   /* Project id 3222465 */
   src: url('../font/iconfont.woff2') format('woff2'),
@@ -13,6 +18,14 @@
 
 .iconfont {
   font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anarchaos {
+  font-family: "Anarchaos" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
