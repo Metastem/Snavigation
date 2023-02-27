@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         iziToast.show({
             title: hello,
-            message: '欢迎来到 Snavigation'
+            message: 'Welcome to Metastem'
         });
     }, 800);
 
@@ -42,21 +42,21 @@ window.addEventListener('load', function () {
 //进入问候
 now = new Date(), hour = now.getHours()
 if (hour < 6) {
-    var hello = "凌晨好";
+    var hello = "Good morning";
 } else if (hour < 9) {
-    var hello = "早上好";
+    var hello = "Good morning";
 } else if (hour < 12) {
-    var hello = "上午好";
+    var hello = "Good morning";
 } else if (hour < 14) {
-    var hello = "中午好";
+    var hello = "Good noon";
 } else if (hour < 17) {
-    var hello = "下午好";
+    var hello = "Good afternoon";
 } else if (hour < 19) {
-    var hello = "傍晚好";
+    var hello = "Good evening";
 } else if (hour < 22) {
-    var hello = "晚上好";
+    var hello = "Good night";
 } else {
-    var hello = "夜深了";
+    var hello = "Late at night";
 }
 
 //获取时间
@@ -68,7 +68,7 @@ function time() {
     dt = new Date();
     var mm = dt.getMonth() + 1;
     var d = dt.getDate();
-    var weekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+    var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var day = dt.getDay();
     var h = dt.getHours();
     var m = dt.getMinutes();
@@ -79,7 +79,7 @@ function time() {
         m = "0" + m;
     }
     $("#time_text").html(h + '<span id="point">:</span>' + m);
-    $("#day").html(mm + "&nbsp;月&nbsp;" + d + "&nbsp;日&nbsp;" + weekday[day]);
+    $("#day").html(mm + "&nbsp;/&nbsp;" + d + "&nbsp;&nbsp;" + weekday[day]);
     t = setTimeout(time, 1000);
 }
 
@@ -151,20 +151,6 @@ color: rgb(244,167,89);
 var styleContent = `
 color: rgb(30,152,255);
 `
-var title1 = 'Snavigation'
-var title2 = `
- _____ __  __  _______     ____     __
-|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
-  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
-  | | | |\\/| |\\___ \\  \\   /    \\   /  
- _| |_| |  | |____) |  | |      | |   
-|_____|_|  |_|_____/   |_|      |_|                                                     
-`
-var content = `
-版 本 号：1.1
-更新日期：2022-07-12
-
-Github:  https://github.com/imsyy/Snavigation
-`
+var title1 = 'Metastem'
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
