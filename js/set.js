@@ -167,7 +167,7 @@ function keywordReminder() {
     var keyword = $(".wd").val();
     if (keyword != "") {
         $.ajax({
-            url: 'http://suggestqueries.google.com/complete/search?q=' + keyword,
+            url: 'https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=' + keyword,
             dataType: 'jsonp',
             jsonp: 'cb', //回调函数的参数名(键值)key
             success: function (data) {
