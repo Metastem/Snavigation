@@ -752,7 +752,7 @@ $(document).ready(function () {
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
                     iziToast.show({
-                        message: 'Reset successfully'
+                        message: 'Reset successful'
                     });
                     setTimeout(function () {
                         window.location.reload()
