@@ -597,21 +597,21 @@ $(document).ready(function () {
         });
         iziToast.show({
             timeout: 8000,
-            message: '是否设置为默认搜索引擎？',
+            message: 'Is it set as default search engine?',
             buttons: [
-                ['<button>确认</button>', function (instance, toast) {
+                ['<button>Confirm</button>', function (instance, toast) {
                     setSeInit();
                     instance.hide({
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
                     iziToast.show({
-                        message: '设置成功'
+                        message: 'Successfully set'
                     });
                     setTimeout(function () {
                         window.location.reload()
                     }, 1000);
                 }, true],
-                ['<button>取消</button>', function (instance, toast) {
+                ['<button>Cancel</button>', function (instance, toast) {
                     instance.hide({
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
@@ -893,7 +893,7 @@ $(document).ready(function () {
             timeout: 8000,
             message: 'Shortcut data will be cleared',
             buttons: [
-                ['<button>确认</button>', function (instance, toast) {
+                ['<button>Confirm</button>', function (instance, toast) {
                     setQuickList(quick_list_preinstall);
                     setQuickInit();
                     instance.hide({
@@ -1036,7 +1036,7 @@ $(document).ready(function () {
     $("#my_data_out").click(function () {
         var cookies = Cookies.get();
         var json = JSON.stringify(cookies);
-        download("Snavigation-back-up-" + $.now() + ".json", json);
+        download("Metastem-back-up-" + $.now() + ".json", json);
         iziToast.show({
             timeout: 2000,
             message: 'The backup file has been exported to the download directory'
