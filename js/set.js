@@ -7,14 +7,43 @@ var se_list_preinstall = {
         url: "https://go.metastem.su/search.php",
         name: "q",
         icon: "anarchaos",
-    }
+    },
+    '2': {
+        id: 2,
+        title: "Google",
+        url: "https://www.google.com/search",
+        name: "q",
+        icon: "iconfont icon-google",
+    },
+    '3': {
+        id: 3,
+        title: "Bing",
+        url: "https://www.bing.com/search",
+        name: "q",
+        icon: "iconfont icon-bing",
+    },
+    '4': {
+        id: 4,
+        title: "Github",
+        url: "https://github.com/search",
+        name: "q",
+        icon: "iconfont icon-github",
+    },
 };
 
 // 默认快捷方式
 var quick_list_preinstall = {
     '1': {
-        title: "Vercel",
-        url: "https://vercel.com/",
+        title: "Translate",
+        url: "https://translate.metastem.su/",
+    },
+    '2': {
+        title: "Wiki",
+        url: "https://wiki.metastem.su/",
+    },
+    '3': {
+        title: "Beatbump Music",
+        url: "https://bb.metastem.su/",
     }
 };
 
