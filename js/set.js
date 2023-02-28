@@ -613,7 +613,7 @@ $(document).ready(function () {
         if (!num.test(key)) {
             iziToast.show({
                 timeout: 2000,
-                message: '序号 ' + key + ' 不是正整数'
+                message: 'Serial number ' + key + ' is not a positive integer'
             });
             return;
         }
@@ -623,9 +623,9 @@ $(document).ready(function () {
         if (se_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '搜索引擎 ' + key + ' 已有数据，是否覆盖？',
+                message: 'Search engine ' + key + 'has existing data, overwrite?',
                 buttons: [
-                    ['<button>确认</button>', function (instance, toast) {
+                    ['<button>Confirm</button>', function (instance, toast) {
                         se_list[key] = {
                             title: title,
                             url: url,
@@ -642,10 +642,10 @@ $(document).ready(function () {
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
                         iziToast.show({
-                            message: '覆盖成功'
+                            message: 'Success'
                         });
                     }, true],
-                    ['<button>取消</button>', function (instance, toast) {
+                    ['<button>Cancel</button>', function (instance, toast) {
                         instance.hide({
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
@@ -669,7 +669,7 @@ $(document).ready(function () {
         setSeInit();
         iziToast.show({
             timeout: 2000,
-            message: '添加成功'
+            message: 'Added'
         });
         $(".se_add_content").hide();
         showSe();
@@ -707,14 +707,14 @@ $(document).ready(function () {
         var key = $(this).val();
         if (key == se_default) {
             iziToast.show({
-                message: '默认搜索引擎不可删除'
+                message: 'The default search engine cannot be deleted'
             });
         } else {
             iziToast.show({
                 timeout: 8000,
-                message: '搜索引擎 ' + key + ' 是否删除？',
+                message: 'Search engine ' + key + ' delete or not?',
                 buttons: [
-                    ['<button>确认</button>', function (instance, toast) {
+                    ['<button>Confirm</button>', function (instance, toast) {
                         var se_list = getSeList();
                         delete se_list[key];
                         setSeList(se_list);
@@ -723,10 +723,10 @@ $(document).ready(function () {
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
                         iziToast.show({
-                            message: '删除成功'
+                            message: 'Deleted'
                         });
                     }, true],
-                    ['<button>取消</button>', function (instance, toast) {
+                    ['<button>Cancel</button>', function (instance, toast) {
                         instance.hide({
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
@@ -740,9 +740,9 @@ $(document).ready(function () {
     $(".set_se_list_preinstall").click(function () {
         iziToast.show({
             timeout: 8000,
-            message: '现有搜索引擎数据将被清空',
+            message: 'Existing search engine data will be cleared',
             buttons: [
-                ['<button>确认</button>', function (instance, toast) {
+                ['<button>Confirm</button>', function (instance, toast) {
                     setSeList(se_list_preinstall);
                     Cookies.set('se_default', 1, {
                         expires: 36500
@@ -752,13 +752,13 @@ $(document).ready(function () {
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
                     iziToast.show({
-                        message: '重置成功'
+                        message: 'Reset successfully'
                     });
                     setTimeout(function () {
                         window.location.reload()
                     }, 1000);
                 }, true],
-                ['<button>取消</button>', function (instance, toast) {
+                ['<button>Cancel</button>', function (instance, toast) {
                     instance.hide({
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
@@ -788,7 +788,7 @@ $(document).ready(function () {
         if (!num.test(key)) {
             iziToast.show({
                 timeout: 2000,
-                message: '快捷方式 ' + key + ' 不是正整数'
+                message: 'Shortcut ' + key + ' is not a positive integer'
             });
             return;
         }
@@ -798,9 +798,9 @@ $(document).ready(function () {
         if (quick_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '快捷方式 " + key + " 已有数据，是否覆盖？',
+                message: 'Shortcut " + key + " has existing data, overwrite?',
                 buttons: [
-                    ['<button>确认</button>', function (instance, toast) {
+                    ['<button>Confirm</button>', function (instance, toast) {
                         quick_list[key] = {
                             title: title,
                             url: url,
@@ -816,10 +816,10 @@ $(document).ready(function () {
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
                         iziToast.show({
-                            message: '覆盖成功'
+                            message: 'Overwrite success'
                         });
                     }, true],
-                    ['<button>取消</button>', function (instance, toast) {
+                    ['<button>Cancel</button>', function (instance, toast) {
                         instance.hide({
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
@@ -843,7 +843,7 @@ $(document).ready(function () {
         $(".quick_add_content").hide();
         iziToast.show({
             timeout: 2000,
-            message: '添加成功'
+            message: 'Added'
         });
 
         //显示列表
@@ -862,7 +862,7 @@ $(document).ready(function () {
     $(".set_quick_list_preinstall").click(function () {
         iziToast.show({
             timeout: 8000,
-            message: '快捷方式数据将被清空',
+            message: 'Shortcut data will be cleared',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setQuickList(quick_list_preinstall);
@@ -872,13 +872,13 @@ $(document).ready(function () {
                     }, toast, 'buttonName');
                     iziToast.show({
                         timeout: 2000,
-                        message: '重置成功'
+                        message: 'Reset successful'
                     });
                     // setTimeout(function () {
                     //     window.location.reload()
                     // }, 1000);
                 }, true],
-                ['<button>取消</button>', function (instance, toast) {
+                ['<button>Cancel</button>', function (instance, toast) {
                     instance.hide({
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
@@ -911,9 +911,9 @@ $(document).ready(function () {
 
         iziToast.show({
             timeout: 8000,
-            message: '快捷方式 ' + key + ' 是否删除？',
+            message: 'Shortcut ' + key + ' delete or not?',
             buttons: [
-                ['<button>确认</button>', function (instance, toast) {
+                ['<button>Confirm</button>', function (instance, toast) {
                     var quick_list = getQuickList();
                     delete quick_list[key];
                     setQuickList(quick_list);
@@ -923,10 +923,10 @@ $(document).ready(function () {
                     }, toast, 'buttonName');
                     iziToast.show({
                         timeout: 2000,
-                        message: '删除成功'
+                        message: 'Successfully deleted'
                     });
                 }, true],
-                ['<button>取消</button>', function (instance, toast) {
+                ['<button>Cancel</button>', function (instance, toast) {
                     instance.hide({
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
@@ -942,39 +942,39 @@ $(document).ready(function () {
         bg_img["type"] = type;
 
         if (type === "1") {
-            $('#wallpaper_text').html("显示默认壁纸，刷新页面以生效");
+            $('#wallpaper_text').html("Display the default wallpaper, refresh the page to take effect");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: 'The wallpaper is set successfully and the refresh takes effect',
             });
         }
 
         if (type === "2") {
-            $('#wallpaper_text').html("显示必应每日一图，每天更新，刷新页面以生效 | API @ 缙哥哥");
+            $('#wallpaper_text').html("Updated daily, refresh the page to take effect");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: 'The wallpaper is set successfully and the refresh takes effect',
             });
         }
 
         if (type === "3") {
-            $('#wallpaper_text').html("显示随机风景图，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("Display a random landscape image, change after each refresh, refresh the page to take effect");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: 'The wallpaper is set successfully and the refresh takes effect',
             });
         }
 
         if (type === "4") {
-            $('#wallpaper_text').html("显示随机二次元图，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("Display a random two-dimensional map, which will be replaced after each refresh, and refresh the page to take effect");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: 'The wallpaper is set successfully and the refresh takes effect',
             });
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("自定义壁纸地址，请输入正确地址，点击保存且刷新页面以生效");
+            $('#wallpaper_text').html("Custom wallpaper address, please enter the correct address, click save and refresh the page to take effect");
             $("#wallpaper_url").fadeIn(100);
             $("#wallpaper-button").fadeIn(100);
             $("#wallpaper-url").val(bg_img["path"]);
@@ -990,7 +990,7 @@ $(document).ready(function () {
         var reg = /^http(s)?:\/\/(([\w-]+\.)+[\w-]|localhost)+(:[0-9]{1,5})?(\/[\w- ./?%&=]*)?$/g;
         if (!reg.test(url)) {
             iziToast.show({
-                message: '请输入正确的链接',
+                message: 'Please enter the correct link',
             });
         } else {
             var bg_img = getBgImg();
@@ -998,7 +998,7 @@ $(document).ready(function () {
             bg_img["path"] = url;
             setBgImg(bg_img);
             iziToast.show({
-                message: '自定义壁纸设置成功，刷新生效',
+                message: 'The custom wallpaper is set successfully, and the refresh takes effect',
             });
         }
     });
@@ -1010,7 +1010,7 @@ $(document).ready(function () {
         download("Snavigation-back-up-" + $.now() + ".json", json);
         iziToast.show({
             timeout: 2000,
-            message: '已导出备份文件至下载目录'
+            message: 'The backup file has been exported to the download directory'
         });
     });
 
@@ -1024,7 +1024,7 @@ $(document).ready(function () {
         var selectedFile = document.getElementById('my_data_file').files[0];
         //var name = selectedFile.name;//读取选中文件的文件名
         //var size = selectedFile.size;//读取选中文件的大小
-        //console.log("文件名:"+name+" 大小:"+size);
+        //console.log("Filename:"+name+" Size:"+size);
 
         var reader = new FileReader(); //这是核心,读取操作就是由它完成.
         reader.readAsText(selectedFile); //读取文件的内容,也可以读取文件的URL
@@ -1039,23 +1039,23 @@ $(document).ready(function () {
             } catch (e) {
                 iziToast.show({
                     timeout: 2000,
-                    message: '数据解析异常'
+                    message: 'Data parsing exception'
                 });
                 return;
             }
             if (typeof mydata != 'object') {
                 iziToast.show({
                     timeout: 2000,
-                    message: '数据格式错误'
+                    message: 'Data format error'
                 });
                 return;
             }
 
             iziToast.show({
                 timeout: 8000,
-                message: '当前数据将会被覆盖！是否继续导入？',
+                message: 'Current data will be overwritten! Do you want to continue importing?',
                 buttons: [
-                    ['<button>确认</button>', function (instance, toast) {
+                    ['<button>Confirm</button>', function (instance, toast) {
                         for (var key in mydata) {
                             Cookies.set(key, mydata[key], {
                                 expires: 36500
@@ -1066,13 +1066,13 @@ $(document).ready(function () {
                         }, toast, 'buttonName');
                         iziToast.show({
                             timeout: 2000,
-                            message: '导入成功'
+                            message: 'Imported successfully'
                         });
                         setTimeout(function () {
                             window.location.reload()
                         }, 1000);
                     }, true],
-                    ['<button>取消</button>', function (instance, toast) {
+                    ['<button>Cancel</button>', function (instance, toast) {
                         instance.hide({
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
