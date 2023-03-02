@@ -42,7 +42,7 @@ var quick_list_preinstall = {
         url: "https://wiki.metastem.su/",
     },
     '3': {
-        title: "Beatbump Music",
+        title: "Music",
         url: "https://bb.metastem.su/",
     }
 };
